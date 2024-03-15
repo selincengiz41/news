@@ -39,40 +39,32 @@
 
         <Constraint
             android:id="@+id/container_latest"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            motion:layout_constraintBottom_toTopOf="@+id/container_news"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_250sdp"
             motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintHorizontal_bias="0.5"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/container_search_view"
-            motion:layout_constraintVertical_weight="4"
 
             >
         </Constraint>
         <Constraint
             android:id="@+id/container_news"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintHorizontal_bias="0.5"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toBottomOf="@+id/container_latest"
-            motion:layout_constraintVertical_weight="5">
+            motion:layout_constraintTop_toBottomOf="@+id/container_latest">
 
 
         </Constraint>
         <Constraint
             android:id="@id/container_search_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            motion:layout_constraintBottom_toTopOf="@+id/container_latest"
+            android:layout_height="@dimen/_35sdp"
             motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintHorizontal_bias="0.5"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintVertical_weight="1">
+            motion:layout_constraintTop_toTopOf="parent">
 
 
         </Constraint>
@@ -95,7 +87,7 @@
         <Constraint
             android:id="@+id/container_news"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"

@@ -14,7 +14,14 @@
         android:layout_height="match_parent"
         tools:context=".presentation.home.HomeFragment">
 
-
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
 
         <androidx.constraintlayout.motion.widget.MotionLayout
             android:id="@+id/main_container"
@@ -32,13 +39,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/container_search_view"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/container_latest"
+                android:layout_height="@dimen/_35sdp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_weight="1">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <SearchView
                     android:id="@+id/search_view"
@@ -76,14 +80,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@id/container_latest"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/container_news"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_250sdp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/container_search_view"
-                app:layout_constraintVertical_weight="4">
+                app:layout_constraintTop_toBottomOf="@+id/container_search_view">
 
                 <TextView
                     android:id="@+id/textView2"
@@ -120,14 +121,12 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/container_news"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/container_latest"
-                app:layout_constraintVertical_weight="5">
+                app:layout_constraintTop_toBottomOf="@+id/container_latest">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/category_recycler"
@@ -149,7 +148,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/news_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:clipToPadding="false"
                     android:orientation="vertical"
@@ -166,7 +165,7 @@
 
         </androidx.constraintlayout.motion.widget.MotionLayout>
 
-
+</androidx.core.widget.NestedScrollView>
 
         <ProgressBar
             android:id="@+id/progressBar"

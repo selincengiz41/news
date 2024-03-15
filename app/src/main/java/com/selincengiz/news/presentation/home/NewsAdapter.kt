@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.selincengiz.news.R
 import com.selincengiz.news.common.Extensions.loadUrl
 import com.selincengiz.news.databinding.ItemNewsBinding
 import com.selincengiz.news.domain.entities.News
@@ -35,13 +36,15 @@ class NewsAdapter(private val itemListener: ItemNewsListener) :
 
         fun bind(news: News) = with(binding) {
 
-       /*     val request = RequestOptions()
-            val requestOptions = request.transforms(CenterCrop(), RoundedCorners(60))
-          imageSlide.loadUrl(news.imageUrl, requestOptions)*/
-            imageSlide.loadUrl(news.imageUrl)
-            title.text=news.title
-            author.text=news.sourceId
-            date.text=news.pubDate
+            if (news.imageUrl != null) {
+                imageSlide.loadUrl(news.imageUrl)
+
+            } else {
+                imageSlide.setImageResource(R.drawable.default_news)
+            }
+            title.text = news.title
+            author.text = news.sourceId
+            date.text = news.pubDate
 
 
 
