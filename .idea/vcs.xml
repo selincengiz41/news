@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ArtBook" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BooksApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BudgetApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CameraXAI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CanvasLibrary" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CatchTheKenny" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DineFeast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Fab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/FirstApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ghibli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/GuessGame" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HaveFun" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HiltProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JrOnedio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/KotlinCountries" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/KotlinUlkeler" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Landmark" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MovieApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PaintView" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ProjectTwo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Saurus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Survey" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SurveyApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WizardMemory" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/feature1/surveysaurus-android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jrOnedio2" vcs="Git" />
+  </component>
+</project>

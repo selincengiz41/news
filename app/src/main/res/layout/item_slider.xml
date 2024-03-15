@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.tistory.zladnrms.roundablelayout.RoundableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cornerAll="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/imageSlide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:scaleType="fitXY"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="by Ryan Browne"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+           android:layout_marginHorizontal="@dimen/_20sdp"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"></TextView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/newyork_small"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="Crypto investors should be prepared to lose all their money, BOE governor says"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author"></TextView>
+    </com.tistory.zladnrms.roundablelayout.RoundableLayout>
+
+
+
+
+</layout>

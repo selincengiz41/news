@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "693919032129",
+    "project_id": "news-dc6c9",
+    "storage_bucket": "news-dc6c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693919032129:android:2fa74a890cf7f2780677c0",
+        "android_client_info": {
+          "package_name": "com.selincengiz.news"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq7cdjvkHlWKhmyxbB-X7LY71wopOZRMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

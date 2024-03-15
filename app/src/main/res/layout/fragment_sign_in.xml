@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.signin.SignInFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/login" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarLogin"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></ProgressBar>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/canvas_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:alpha="0.2"
+                        android:background="@drawable/edittext_background"
+                        android:clickable="false"
+                        android:ems="10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatButton>
+
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.5"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/mail"
+                        android:fontFamily="@font/mulish_regular"
+
+                        android:hint="Enter Your Email"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/_20sdp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/canvas_name"
+                        app:layout_constraintEnd_toEndOf="@+id/canvas_name"
+                        app:layout_constraintStart_toStartOf="@+id/canvas_name"
+                        app:layout_constraintTop_toTopOf="@+id/canvas_name"></EditText>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/canvas_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:alpha="0.2"
+                        android:background="@drawable/edittext_background"
+
+                        android:clickable="false"
+                        android:ems="10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/canvas_name"></androidx.appcompat.widget.AppCompatButton>
+
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.5"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/lockk"
+                        android:fontFamily="@font/mulish_regular"
+
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingHorizontal="@dimen/_20sdp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/canvas_email"
+                        app:layout_constraintEnd_toEndOf="@+id/canvas_email"
+                        app:layout_constraintStart_toStartOf="@+id/canvas_email"
+                        app:layout_constraintTop_toTopOf="@+id/canvas_email"></EditText>
+
+                    <CheckBox
+                        android:id="@+id/cb_remember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:alpha="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/canvas_email"
+                        app:layout_constraintTop_toBottomOf="@+id/canvas_email"></CheckBox>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.7"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="Remember me"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_8ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cb_remember"
+                        app:layout_constraintStart_toEndOf="@+id/cb_remember"
+                        app:layout_constraintTop_toTopOf="@+id/cb_remember"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:background="@drawable/button_background"
+                android:ems="10"
+                android:fontFamily="@font/mulish_semibold"
+                android:text="Next  "
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></androidx.appcompat.widget.AppCompatButton>
+
+
+            <TextView
+                android:id="@+id/newtw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/mulish_semibolditalic"
+                android:text="New Member?  "
+                android:textColor="#252525"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toStartOf="@+id/sign_up_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_in_button"></TextView>
+
+
+            <TextView
+                android:id="@+id/sign_up_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/mulish_semibolditalic"
+                android:text="Register now"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/newtw"
+                app:layout_constraintTop_toBottomOf="@+id/sign_in_button"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

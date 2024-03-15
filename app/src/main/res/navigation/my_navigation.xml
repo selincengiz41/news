@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.selincengiz.news.presentation.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/splashToSignIn"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/splashToHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.selincengiz.news.presentation.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/homeToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.selincengiz.news.presentation.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.selincengiz.news.presentation.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.selincengiz.news.presentation.signin.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/signInToSignUp"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/signInToHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.selincengiz.news.presentation.signup.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/signUpToSignIn"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/signUpToHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/my_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.selincengiz.news.presentation.detail.DetailFragment"
+        android:label="DetailFragment" />
+</navigation>
