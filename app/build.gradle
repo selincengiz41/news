@@ -97,4 +97,6 @@ dependencies {
     // Add the dependency for the Firebase Authentication library
     implementation("com.google.firebase:firebase-auth-ktx")
 
+    implementation ("jp.wasabeef:glide-transformations:4.3.0")
+
 }

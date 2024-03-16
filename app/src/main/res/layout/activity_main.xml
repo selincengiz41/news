@@ -45,7 +45,18 @@
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         </com.tistory.zladnrms.roundablelayout.RoundableLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:clickable="true"
+            android:background="@drawable/fab"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
 
+            />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navHost"

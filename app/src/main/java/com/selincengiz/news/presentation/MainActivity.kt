@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         bottomNav()
+
+
     }
 
 
@@ -42,12 +44,14 @@ class MainActivity : AppCompatActivity() {
 
                     R.id.homeFragment -> {
                         containerBottomNavigationView.visibility = View.VISIBLE
+                        floatingActionButton.visibility=View.GONE
 
                     }
 
 
                     R.id.favoriteFragment -> {
                         containerBottomNavigationView.visibility = View.VISIBLE
+                        floatingActionButton.visibility=View.GONE
 
 
                     }
@@ -55,12 +59,19 @@ class MainActivity : AppCompatActivity() {
 
                     R.id.profileFragment -> {
                         containerBottomNavigationView.visibility = View.VISIBLE
+                        floatingActionButton.visibility=View.GONE
 
 
                     }
 
+                    R.id.detailFragment ->{
+                        containerBottomNavigationView.visibility = View.GONE
+                        floatingActionButton.visibility=View.VISIBLE
+                    }
+
                     else -> {
                         containerBottomNavigationView.visibility = View.GONE
+                        floatingActionButton.visibility=View.GONE
 
 
                     }

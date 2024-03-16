@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -11,7 +12,22 @@
         android:layout_height="match_parent"
         tools:context=".presentation.profile.ProfileFragment">
 
-
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/log_out_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/selected_category_background"
+            android:text="Log Out"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:textSize="@dimen/_16ssp"
+            android:layout_marginBottom="@dimen/_95sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+           ></androidx.appcompat.widget.AppCompatButton>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

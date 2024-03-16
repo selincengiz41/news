@@ -102,6 +102,7 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
         } else {
             binding.mainContainer
                 .transitionToEnd()
+
             requireActivity().findViewById<RoundableLayout>(R.id.container_bottomNavigationView).visibility =
                 View.GONE
 
@@ -254,7 +255,7 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
     }
 
     override fun onClicked(news: News) {
-        findNavController().navigate(HomeFragmentDirections.homeToDetail())
+        findNavController().navigate(HomeFragmentDirections.homeToDetail(news))
     }
 
     override fun onCategoryClicked(category: Category) {
