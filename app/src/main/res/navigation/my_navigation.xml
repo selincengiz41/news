@@ -33,7 +33,11 @@
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.selincengiz.news.presentation.favorite.FavoriteFragment"
-        android:label="FavoriteFragment" />
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/favoriteToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.selincengiz.news.presentation.profile.ProfileFragment"
