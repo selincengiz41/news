@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.homeFragment -> {
                         containerBottomNavigationView.visibility = View.VISIBLE
                         floatingActionButton.visibility=View.GONE
+                        window.statusBarColor=getResources().getColor(R.color.black)
 
                     }
 
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.favoriteFragment -> {
                         containerBottomNavigationView.visibility = View.VISIBLE
                         floatingActionButton.visibility=View.GONE
+                        window.statusBarColor= getResources().getColor(R.color.black)
 
 
                     }
@@ -60,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.profileFragment -> {
                         containerBottomNavigationView.visibility = View.VISIBLE
                         floatingActionButton.visibility=View.GONE
+                        window.statusBarColor= getResources().getColor(R.color.black)
 
 
                     }
@@ -67,11 +70,14 @@ class MainActivity : AppCompatActivity() {
                     R.id.detailFragment ->{
                         containerBottomNavigationView.visibility = View.GONE
                         floatingActionButton.visibility=View.VISIBLE
+                        window.statusBarColor= getResources().getColor(R.color.white)
+
                     }
 
                     else -> {
                         containerBottomNavigationView.visibility = View.GONE
                         floatingActionButton.visibility=View.GONE
+                        window.statusBarColor= getResources().getColor(R.color.black)
 
 
                     }

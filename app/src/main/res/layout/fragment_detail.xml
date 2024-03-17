@@ -81,6 +81,7 @@
                     android:layout_marginHorizontal="@dimen/_40sdp"
                     android:alpha="0.8"
                     app:cornerAll="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
                     app:layout_constraintBottom_toTopOf="@id/container_text"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -184,12 +185,13 @@
 
 
                 <com.tistory.zladnrms.roundablelayout.RoundableLayout
-                    android:id="@+id/back_button"
-                    android:layout_width="@dimen/_35sdp"
-                    android:layout_height="@dimen/_35sdp"
+
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
                     app:cornerAll="@dimen/_10sdp"
+                    android:alpha="0.8"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -205,6 +207,7 @@
                     </ImageView>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/back_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/back"

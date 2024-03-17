@@ -3,7 +3,9 @@ package com.selincengiz.news.di
 
 import com.google.firebase.auth.FirebaseAuth
 import com.selincengiz.news.data.repo.AuthRepo
+import com.selincengiz.news.data.repo.FavoriteRepo
 import com.selincengiz.news.data.repo.NewsRepo
+import com.selincengiz.news.data.source.local.NewsDao
 import com.selincengiz.news.data.source.remote.NewsService
 
 import dagger.Module
@@ -27,6 +29,9 @@ object RepoModule {
     fun provideNewsRepo(newsService: NewsService) =
         NewsRepo(newsService = newsService)
 
-
+    @Provides
+    @Singleton
+    fun provideFavoriteRepo(newsDao: NewsDao) =
+        FavoriteRepo(newsDao = newsDao)
 
 }

@@ -20,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/_55sdp"
             android:layout_marginHorizontal="@dimen/_30sdp"
-            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
             android:elevation="@dimen/_5sdp"
             app:cornerAll="@dimen/_30sdp"
             app:labelVisibilityMode="labeled"
