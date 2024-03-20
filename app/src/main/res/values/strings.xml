@@ -38,5 +38,7 @@
     <string name="other">Other</string>
     <string name="searchview_hint">Dogecoin to the Moon..</string>
     <string name="country">Country</string>
+    <string name="change_password">Change Password</string>
+    <string name="new_password">New Password</string>
 
 </resources>

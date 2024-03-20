@@ -12,16 +12,25 @@
         android:layout_height="match_parent"
         tools:context=".presentation.settings.SettingFragment">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/change_password"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Hi Görll"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:text="@string/change_password"
+            android:textAllCaps="false"
+            android:textColor="@color/redBlack"
+            android:textSize="@dimen/_16ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        </TextView>
+        </androidx.appcompat.widget.AppCompatButton>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

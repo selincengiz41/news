@@ -96,5 +96,13 @@
     <dialog
         android:id="@+id/settingFragment"
         android:name="com.selincengiz.news.presentation.settings.SettingFragment"
-        android:label="SettingFragment" />
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/settingToPassword"
+            app:destination="@id/passwordFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/passwordFragment"
+        android:name="com.selincengiz.news.presentation.password.PasswordFragment"
+        android:label="PasswordFragment" />
 </navigation>

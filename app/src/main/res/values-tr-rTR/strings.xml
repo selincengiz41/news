@@ -37,4 +37,6 @@
     <string name="other">Diğer</string>
     <string name="searchview_hint">TL kurunda yükseliş..</string>
     <string name="country">Ülke</string>
+    <string name="change_password">Şifre Değiştir</string>
+    <string name="new_password">Yeni Şifre</string>
 </resources>
