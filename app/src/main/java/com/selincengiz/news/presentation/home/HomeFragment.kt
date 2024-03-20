@@ -47,19 +47,21 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
     private val adapterCategory by lazy { CategoryAdapter(this) }
     private val slideHandler = Handler()
     private var categoryList = mutableListOf<Category>(
-        Category("Business", true),
-        Category("Crime", false),
-        Category("Education", false),
-        Category("Entertainment", false),
-        Category("Health", false),
-        Category("Lifestyle", false),
-        Category("Politics", false),
-        Category("Science", false),
-        Category("Sports", false),
-        Category("Technology", false),
-        Category("Tourism", false),
-        Category("World", false),
-        Category("Other", false)
+     Category("business", true),
+        Category( "crime",false),
+        Category("education", false),
+        Category("entertainment" ,false),
+        Category("health", false),
+        Category( "lifestyle",false),
+        Category("politics", false),
+        Category( "science",false),
+        Category( "sports",false),
+        Category( "technology",false),
+        Category("tourism", false),
+        Category("world",false),
+        Category("other", false)
+
+
     )
     var currentPage = 0
     var timer: Timer? = null
@@ -260,11 +262,11 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
 
     override fun onCategoryClicked(category: Category) {
         categoryList.forEach {
-            it.isSelected = it.name == category.name
+            it.isSelected = it.key == category.key
 
         }
         adapterCategory.notifyDataSetChanged()
-        viewModel.getNewsByCategory(category.name.lowercase(), "tr")
+        viewModel.getNewsByCategory(category.key, "tr")
 
     }
 

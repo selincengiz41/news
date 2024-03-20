@@ -39,15 +39,60 @@ class CategoryAdapter(private val itemListener: ItemCategoryListener) :
 
         fun bind(category: Category) = with(binding) {
 
-            if(category.isSelected){
-                btnCategory.setBackground(binding.root.resources.getDrawable(R.drawable.selected_category_background))
-                btnCategory.setTextColor(binding.root.resources.getColor(R.color.white))
-            }else{
-                btnCategory.setBackground(binding.root.resources.getDrawable(R.drawable.category_background))
-                btnCategory.setTextColor(binding.root.resources.getColor(R.color.redBlack))
+            if (category.isSelected) {
+                btnCategory.setBackground(root.resources.getDrawable(R.drawable.selected_category_background))
+                btnCategory.setTextColor(root.resources.getColor(R.color.white))
+            } else {
+                btnCategory.setBackground(root.resources.getDrawable(R.drawable.category_background))
+                btnCategory.setTextColor(root.resources.getColor(R.color.redBlack))
+            }
+            root.requestLayout()
+
+            with(root.resources) {
+                when (category.key) {
+                    "business" -> btnCategory.text =
+                        getString(R.string.business)
+
+                    "crime" -> btnCategory.text =
+                        getString(R.string.crime)
+
+                    "education" -> btnCategory.text =
+                        getString(R.string.education)
+
+                    "entertainment" -> btnCategory.text =
+                        getString(R.string.entertainment)
+
+                    "health" -> btnCategory.text =
+                        getString(R.string.health)
+
+                    "lifestyle" -> btnCategory.text =
+                        getString(R.string.lifestyle)
+
+                    "politics" -> btnCategory.text =
+                        getString(R.string.politics)
+
+                    "science" -> btnCategory.text =
+                        getString(R.string.science)
+
+                    "sports" -> btnCategory.text =
+                        getString(R.string.sports)
+
+                    "technology" -> btnCategory.text =
+                        getString(R.string.technology)
+
+                    "tourism" -> btnCategory.text =
+                        getString(R.string.tourism)
+
+                    "world" -> btnCategory.text =
+                        getString(R.string.world)
+
+                    "other" -> btnCategory.text =
+                        getString(R.string.other)
+
+                }
             }
 
-        btnCategory.text = category.name
+
 
 
             btnCategory.setOnClickListener {

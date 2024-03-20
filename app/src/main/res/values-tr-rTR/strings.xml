@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">News</string>
+    <string name="permission_required">Fotoğrafınızı güncellemek için izin gerekli.</string>
+    <string name="latest_news">Son Dakika Haberleri</string>
+    <string name="favorite_news">Favori Haberler</string>
+    <string name="language">Dil</string>
+    <string name="settings">Ayarlar</string>
+    <string name="log_out">Çıkış</string>
+    <string name="full_name">Ad Soyad</string>
+    <string name="valid_email">Geçerli Email</string>
+    <string name="strong_password">Şifre</string>
+    <string name="password_confirm">Şifre Doğrula</string>
+    <string name="next">Devam</string>
+    <string name="already_a_member">"Zaten hesabın var mı?  "</string>
+    <string name="login">Giriş</string>
+    <string name="enter_email">Email Giriniz</string>
+    <string name="password">Şifre</string>
+    <string name="new_member">Yeni üye misin?</string>
+    <string name="register">Şimdi kayıt ol</string>
+    <string name="remember_me">Beni Hatırla</string>
+    <string name="profile">Profil</string>
+    <string name="favorite">Favori</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="business">İş</string>
+    <string name="crime">Suç</string>
+    <string name="education">Eğitim</string>
+    <string name="entertainment">Eğlence</string>
+    <string name="health">Sağlık</string>
+    <string name="lifestyle">Yaşam Tarzı</string>
+    <string name="politics">Politika</string>
+    <string name="science">Bilim</string>
+    <string name="sports">Spor</string>
+    <string name="technology">Teknoloji</string>
+    <string name="tourism">Turizm</string>
+    <string name="world">Dünya</string>
+    <string name="other">Diğer</string>
+    <string name="searchview_hint">TL kurunda yükseliş..</string>
+    <string name="country">Ülke</string>
+</resources>

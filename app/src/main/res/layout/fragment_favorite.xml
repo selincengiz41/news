@@ -37,7 +37,7 @@
                     android:layout_marginTop="@dimen/_20sdp"
 
                     android:fontFamily="@font/newyork_small"
-                    android:text="Favorite News"
+                    android:text="@string/favorite_news"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_18ssp"
                     android:textStyle="bold"
