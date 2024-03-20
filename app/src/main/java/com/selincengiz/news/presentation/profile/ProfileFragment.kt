@@ -17,18 +17,22 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.selincengiz.news.R
+import com.selincengiz.news.common.Country.COUNTRY
 import com.selincengiz.news.common.Extensions.loadUrl
 import com.selincengiz.news.common.PermissionUtils
 import com.selincengiz.news.common.PermissionUtils.checkPermissionn
 import com.selincengiz.news.common.PermissionUtils.shouldShowRationale
 import com.selincengiz.news.databinding.FragmentProfileBinding
+import com.selincengiz.news.domain.entities.Countries
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Locale
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class ProfileFragment : Fragment() {
+class ProfileFragment : Fragment(), ItemCountryListener {
     private lateinit var binding: FragmentProfileBinding
+
+    private val countryAdapter by lazy { CountryAdapter(this) }
 
     @Inject
     lateinit var auth: FirebaseAuth
@@ -41,6 +45,9 @@ class ProfileFragment : Fragment() {
 
             }
         }
+    private var countryList = mutableListOf<Countries>(
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -48,34 +55,43 @@ class ProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false)
+        binding.countryRecycler.adapter = countryAdapter
         binding.profileFunctions = this
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.name.text=auth.currentUser!!.displayName
+        binding.name.text = auth.currentUser!!.displayName
         binding.logOutButton.setOnClickListener {
             auth.signOut()
             findNavController().navigate(ProfileFragmentDirections.profileToSplash())
         }
+        binding.settingsButton.setOnClickListener {
+            findNavController().navigate(ProfileFragmentDirections.profileToSetting())
+
+        }
         auth.currentUser!!.photoUrl?.let {
             binding.ivPic.loadUrl(it)
         }
+        countryList.add(Countries("tr", true, resources.getDrawable(R.drawable.turkey)))
+        countryList.add(Countries("gb", false, resources.getDrawable(R.drawable.britain)))
+        countryList.add(Countries("us", false, resources.getDrawable(R.drawable.usa)))
+        countryList.add(Countries("de", false, resources.getDrawable(R.drawable.germany)))
+        countryList.add(Countries("ca", false, resources.getDrawable(R.drawable.canada)))
+        countryList.add(Countries("kr", false, resources.getDrawable(R.drawable.korea)))
+        countryList.add(Countries("jp", false, resources.getDrawable(R.drawable.japan)))
+        countryList.add(Countries("fr", false, resources.getDrawable(R.drawable.france)))
+        countryList.add(Countries("it", false, resources.getDrawable(R.drawable.italy)))
+        countryAdapter.submitList(countryList)
 
-        binding.britain.setOnClickListener {
 
-        }
-
-        binding.turkey.setOnClickListener {
-
-        }
     }
 
-    fun imageViewClicked(){
+    fun imageViewClicked() {
 
         openGalleryIntent()
-        requireContext().checkPermissionn( PermissionUtils.galleryPermission,
+        requireContext().checkPermissionn(PermissionUtils.galleryPermission,
             onGranted = {
                 openGalleryIntent()
             },
@@ -119,11 +135,19 @@ class ProfileFragment : Fragment() {
                     ?.addOnCompleteListener { task ->
 
                         task.addOnSuccessListener {
-                            Toast.makeText(requireContext(), "Successfully updated profile!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(),
+                                "Successfully updated profile!",
+                                Toast.LENGTH_SHORT
+                            ).show()
 
                         }
                         task.addOnFailureListener {
-                            Toast.makeText(requireContext(), "Profile update is failed!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(),
+                                "Profile update is failed!",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
 
                     }
@@ -132,6 +156,16 @@ class ProfileFragment : Fragment() {
 
 
         }
+    }
+
+    override fun onCountryClicked(country: Countries) {
+        COUNTRY = country.key
+
+        countryList.forEach {
+            it.isSelected = it.key == country.key
+
+        }
+        countryAdapter.notifyDataSetChanged()
     }
 
 }

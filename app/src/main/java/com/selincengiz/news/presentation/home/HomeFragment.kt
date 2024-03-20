@@ -24,6 +24,7 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.selincengiz.news.R
+import com.selincengiz.news.common.Country
 import com.selincengiz.news.common.HomeState
 import com.selincengiz.news.common.Keyboard.isKeyboardShowing
 import com.selincengiz.news.databinding.FragmentHomeBinding
@@ -84,8 +85,8 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getNewsByLatest("tr")
-        viewModel.getNewsByCategory("business", "tr")
+        viewModel.getNewsByLatest(Country.COUNTRY)
+        viewModel.getNewsByCategory("business", Country.COUNTRY)
         binding.searchView.setOnQueryTextListener(this)
         binding.root.getViewTreeObserver().addOnGlobalLayoutListener(this)
 
@@ -266,14 +267,14 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
 
         }
         adapterCategory.notifyDataSetChanged()
-        viewModel.getNewsByCategory(category.key, "tr")
+        viewModel.getNewsByCategory(category.key, Country.COUNTRY)
 
     }
 
     override fun onQueryTextSubmit(text: String?): Boolean {
         text?.let {
             if (it.length > 3) {
-                viewModel.getNewsByQuery(it, "tr")
+                viewModel.getNewsByQuery(it, Country.COUNTRY)
             }
         }
         return true
@@ -282,7 +283,7 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
     override fun onQueryTextChange(text: String?): Boolean {
         text?.let {
             if (it.length > 3) {
-                viewModel.getNewsByQuery(it, "tr")
+                viewModel.getNewsByQuery(it, Country.COUNTRY)
             }
         }
         return true

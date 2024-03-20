@@ -16,7 +16,7 @@ import okhttp3.internal.wait
 
 
 class SliderAdapter(private val itemListener: ItemSliderListener) :
-    ListAdapter<News, SliderAdapter.SliderViewHolder>(CartDiffCallBack()) {
+    ListAdapter<News, SliderAdapter.SliderViewHolder>(SliderDiffCallBack()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderViewHolder =
         SliderViewHolder(
             ItemSliderBinding.inflate(
@@ -54,7 +54,7 @@ class SliderAdapter(private val itemListener: ItemSliderListener) :
 
     }
 
-    class CartDiffCallBack() : DiffUtil.ItemCallback<News>() {
+    class SliderDiffCallBack() : DiffUtil.ItemCallback<News>() {
         override fun areItemsTheSame(oldItem: News, newItem: News): Boolean {
             return oldItem.articleId == newItem.articleId
         }

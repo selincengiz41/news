@@ -15,7 +15,7 @@ import com.selincengiz.news.domain.entities.News
 
 
 class NewsAdapter(private val itemListener: ItemNewsListener) :
-    ListAdapter<News, NewsAdapter.NewsViewHolder>(CategoryDiffCallBack()) {
+    ListAdapter<News, NewsAdapter.NewsViewHolder>(NewsDiffCallBack()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder =
         NewsViewHolder(
             ItemNewsBinding.inflate(
@@ -55,7 +55,7 @@ class NewsAdapter(private val itemListener: ItemNewsListener) :
 
     }
 
-    class CategoryDiffCallBack() : DiffUtil.ItemCallback<News>() {
+    class NewsDiffCallBack() : DiffUtil.ItemCallback<News>() {
         override fun areItemsTheSame(oldItem: News, newItem: News): Boolean {
             return oldItem.articleId == newItem.articleId
         }

@@ -47,6 +47,9 @@
             app:destination="@id/splashFragment"
             app:popUpTo="@id/my_navigation"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/profileToSetting"
+            app:destination="@id/settingFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -90,4 +93,8 @@
             android:name="news"
             app:argType="com.selincengiz.news.domain.entities.News" />
     </fragment>
+    <dialog
+        android:id="@+id/settingFragment"
+        android:name="com.selincengiz.news.presentation.settings.SettingFragment"
+        android:label="SettingFragment" />
 </navigation>
