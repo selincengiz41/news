@@ -1,12 +1,16 @@
 package com.selincengiz.news.presentation.detail
 
 
+import android.graphics.RenderEffect
+import android.graphics.Shader
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.AppCompatButton
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -44,6 +48,7 @@ class DetailFragment : Fragment() {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.S)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -82,6 +87,9 @@ class DetailFragment : Fragment() {
 
                     }
                 }
+
+            val blur = RenderEffect.createBlurEffect(5f, 5f, Shader.TileMode.DECAL)
+            containerDetail.setRenderEffect(blur)
 
             args.news.articleId?.let { viewModel.isFavorite(it) }
 

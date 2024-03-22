@@ -38,7 +38,7 @@
 
                     android:fontFamily="@font/newyork_small"
                     android:text="@string/favorite_news"
-                    android:textColor="@color/black"
+                    android:textColor="@color/redBlack"
                     android:textSize="@dimen/_18ssp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"

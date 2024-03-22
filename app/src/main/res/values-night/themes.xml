@@ -3,5 +3,19 @@
     <style name="Base.Theme.News" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">#151515</item>
+        <item name="colorPrimaryDark">@color/black</item>
+
+        <item name="colorOnSurface">@color/icon</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/icon</item>
+        <item name="colorAccent">@color/main_color</item>
+        <item name="colorOnPrimary">@color/main_color</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="bottomNavigationStyle">
+            @style/Widget.MaterialComponents.BottomNavigationView.Colored
+        </item>
     </style>
 </resources>

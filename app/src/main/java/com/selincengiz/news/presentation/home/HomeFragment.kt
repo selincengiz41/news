@@ -48,18 +48,18 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
     private val adapterCategory by lazy { CategoryAdapter(this) }
     private val slideHandler = Handler()
     private var categoryList = mutableListOf<Category>(
-     Category("business", true),
-        Category( "crime",false),
+        Category("business", true),
+        Category("crime", false),
         Category("education", false),
-        Category("entertainment" ,false),
+        Category("entertainment", false),
         Category("health", false),
-        Category( "lifestyle",false),
+        Category("lifestyle", false),
         Category("politics", false),
-        Category( "science",false),
-        Category( "sports",false),
-        Category( "technology",false),
+        Category("science", false),
+        Category("sports", false),
+        Category("technology", false),
         Category("tourism", false),
-        Category("world",false),
+        Category("world", false),
         Category("other", false)
 
 
@@ -99,15 +99,22 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
         if (!opened) {
             binding.mainContainer
                 .transitionToStart()
-            requireActivity().findViewById<RoundableLayout>(R.id.container_bottomNavigationView).visibility =
-                View.VISIBLE
+            requireActivity().findViewById<RoundableLayout>(R.id.container_bottomNavigationView)
+                ?.let {
+                    it.visibility =
+                        View.VISIBLE
+                }
+
 
         } else {
             binding.mainContainer
                 .transitionToEnd()
 
-            requireActivity().findViewById<RoundableLayout>(R.id.container_bottomNavigationView).visibility =
-                View.GONE
+            requireActivity().findViewById<RoundableLayout>(R.id.container_bottomNavigationView)
+                ?.let {
+                    it.visibility =
+                        View.GONE
+                }
 
         }
     }

@@ -12,8 +12,9 @@
         <item name="colorOnPrimary">@color/main_color</item>
 
         <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorTertiary">@color/redBlack</item>
 
-    <item name="bottomNavigationStyle">
+        <item name="bottomNavigationStyle">
             @style/Widget.MaterialComponents.BottomNavigationView.Colored
         </item>
 
