@@ -10,9 +10,11 @@ This is a news application that provides instant access to breaking news. Users 
   <img src="https://github.com/selincengiz41/news/assets/60012262/4c4f4755-96d6-4ee4-b173-8f939d4e84b0" width="130" height="300"/>
   <img src="https://github.com/selincengiz41/news/assets/60012262/f7cd1021-ea83-4ec6-bea7-bd2a333d57be" width="130" height="300"/>
   <img src="https://github.com/selincengiz41/news/assets/60012262/8e2aa80c-bfc3-4560-b96b-a10e0c3ed391" width="130" height="300"/>
+  <img src="https://github.com/selincengiz41/news/assets/60012262/cd303a94-d36a-49f7-bc6d-79c2523e9f66" width="130" height="300"/>
   <img src="https://github.com/selincengiz41/news/assets/60012262/446946d2-11d4-4084-a42b-9344ffb3fb2a" width="130" height="300"/>
   <img src="https://github.com/selincengiz41/news/assets/60012262/0e324953-0a47-40c8-9caa-38e4b0abd299" width="130" height="300"/>
   <img src="https://github.com/selincengiz41/news/assets/60012262/014eed8d-e5c9-4bf4-8867-7668d22dca3f" width="130" height="300"/>
+  
 
 
 </p>
