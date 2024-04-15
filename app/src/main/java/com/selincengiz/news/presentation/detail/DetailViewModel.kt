@@ -4,9 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.selincengiz.news.common.DetailState
 import com.selincengiz.news.common.Resource
-import com.selincengiz.news.data.repo.FavoriteRepo
-import com.selincengiz.news.data.repo.NewsRepo
+import com.selincengiz.news.data.repo.FavoriteRepoImpl
 import com.selincengiz.news.domain.entities.News
+import com.selincengiz.news.domain.repo.FavoriteRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DetailViewModel @Inject constructor(
-    private val favoriteRepo: FavoriteRepo,
+    private val favoriteRepoImpl: FavoriteRepo,
 
 
     ) : ViewModel() {
@@ -30,7 +30,7 @@ class DetailViewModel @Inject constructor(
     fun isFavorite(id: String) {
         viewModelScope.launch {
 
-            val result = favoriteRepo.getFavorites()
+            val result = favoriteRepoImpl.getFavorites()
             when (result) {
                 is Resource.Success -> {
                     val res = result.data.find {
@@ -53,14 +53,14 @@ class DetailViewModel @Inject constructor(
 
     fun addFavorite(news: News) {
         viewModelScope.launch {
-            favoriteRepo.addFavorites(news)
+            favoriteRepoImpl.addFavorites(news)
 
         }
     }
 
     fun deleteFavorite(news: News) {
         viewModelScope.launch {
-            favoriteRepo.deleteFavorites(news)
+            favoriteRepoImpl.deleteFavorites(news)
 
         }
     }

@@ -1,10 +1,10 @@
 package com.selincengiz.news.domain.usecase
 
-import android.widget.Toast
 import com.selincengiz.news.common.Resource
-import com.selincengiz.news.data.repo.AuthRepo
+import com.selincengiz.news.data.repo.AuthRepoImpl
+import com.selincengiz.news.domain.repo.AuthRepo
 
-class LoginUseCase(private val authRepo: AuthRepo) {
+class LoginUseCase(private val authRepoImpl: AuthRepo) {
 
     suspend operator fun invoke(
         email: String?,
@@ -12,7 +12,7 @@ class LoginUseCase(private val authRepo: AuthRepo) {
     ): Resource<String> {
         if (email.isNullOrEmpty().not() && password.isNullOrEmpty().not()) {
             if (password!!.length >= 6) {
-                return authRepo.firebaseLogin(email!!, password!!)
+                return authRepoImpl.firebaseLogin(email!!, password!!)
 
             } else {
                 return Resource.Error(Exception("Password must be at least 6 characters."))

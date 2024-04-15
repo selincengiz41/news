@@ -3,10 +3,9 @@ package com.selincengiz.news.presentation.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.selincengiz.news.common.HomeState
-import com.selincengiz.news.common.LoginState
 import com.selincengiz.news.common.Resource
-import com.selincengiz.news.data.repo.NewsRepo
-import com.selincengiz.news.domain.usecase.LoginUseCase
+import com.selincengiz.news.data.repo.NewsRepoImpl
+import com.selincengiz.news.domain.repo.NewsRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -15,7 +14,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val newsRepo: NewsRepo) : ViewModel() {
+class HomeViewModel @Inject constructor(private val newsRepoImpl: NewsRepo) : ViewModel() {
 
     private var _homeState = MutableStateFlow<HomeState>(HomeState.Entry)
     val homeState: StateFlow<HomeState>
@@ -24,7 +23,7 @@ class HomeViewModel @Inject constructor(private val newsRepo: NewsRepo) : ViewMo
     fun getNewsByLatest(country: String) {
         viewModelScope.launch {
             _homeState.value = HomeState.Loading
-            val result = newsRepo.getNewsByLatest(country)
+            val result = newsRepoImpl.getNewsByLatest(country)
             when (result) {
                 is Resource.Success -> {
                     _homeState.value = HomeState.Latest(result.data)
@@ -40,7 +39,7 @@ class HomeViewModel @Inject constructor(private val newsRepo: NewsRepo) : ViewMo
     fun getNewsByCategory(category: String,country: String) {
         viewModelScope.launch {
             _homeState.value = HomeState.Loading
-            val result = newsRepo.getNewsByCategory(category,country)
+            val result = newsRepoImpl.getNewsByCategory(category,country)
             when (result) {
                 is Resource.Success -> {
                     _homeState.value = HomeState.Category(result.data)
@@ -56,7 +55,7 @@ class HomeViewModel @Inject constructor(private val newsRepo: NewsRepo) : ViewMo
     fun getNewsByQuery(q: String,country: String) {
         viewModelScope.launch {
             _homeState.value = HomeState.Loading
-            val result = newsRepo.getNewsByQuery(q,country)
+            val result = newsRepoImpl.getNewsByQuery(q,country)
             when (result) {
                 is Resource.Success -> {
                     _homeState.value = HomeState.Query(result.data)
