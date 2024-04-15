@@ -4,8 +4,8 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="colorPrimary">#151515</item>
-        <item name="colorPrimaryDark">@color/black</item>
-
+        <item name="colorPrimaryDark">@color/redBlack</item>
+        <item name="android:statusBarColor">@color/redBlack</item>
         <item name="colorOnSurface">@color/icon</item>
         <item name="android:editTextColor">@android:color/white</item>
         <item name="android:textColorHint">@color/icon</item>

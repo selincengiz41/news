@@ -34,6 +34,7 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding) {
+
             animationView.addAnimatorListener(object : Animator.AnimatorListener {
                 override fun onAnimationStart(p0: Animator) {
 
