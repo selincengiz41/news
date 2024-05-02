@@ -3,8 +3,8 @@ package com.selincengiz.news.data.repo
 import com.selincengiz.news.common.Resource
 import com.selincengiz.news.data.source.local.NewsDao
 import com.selincengiz.news.domain.entities.News
-import com.selincengiz.news.domain.mapper.mapToNews
-import com.selincengiz.news.domain.mapper.mapToNewsRoom
+import com.selincengiz.news.data.mapper.mapToNews
+import com.selincengiz.news.data.mapper.mapToNewsRoom
 import com.selincengiz.news.domain.repo.FavoriteRepo
 import java.lang.Exception
 

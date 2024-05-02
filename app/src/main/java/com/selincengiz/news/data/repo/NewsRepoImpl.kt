@@ -3,7 +3,7 @@ package com.selincengiz.news.data.repo
 import com.selincengiz.news.common.Resource
 import com.selincengiz.news.data.source.remote.NewsService
 import com.selincengiz.news.domain.entities.News
-import com.selincengiz.news.domain.mapper.mapToNews
+import com.selincengiz.news.data.mapper.mapToNews
 import com.selincengiz.news.domain.repo.NewsRepo
 import java.lang.Exception
 
