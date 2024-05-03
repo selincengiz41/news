@@ -104,6 +104,10 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:32.7.3')
     // Add the dependency for the Firebase Authentication library
     implementation("com.google.firebase:firebase-auth-ktx")
+    //   // Declare the dependency for the Cloud Firestore library
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    // Add the dependency for the Firebase SDK for Google Analytics
+    implementation("com.google.firebase:firebase-analytics-ktx")
 
     implementation ("jp.wasabeef:glide-transformations:4.3.0")
 

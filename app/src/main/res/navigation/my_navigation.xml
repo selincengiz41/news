@@ -54,6 +54,7 @@
             android:id="@+id/profileToSetting"
             app:destination="@id/settingFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.selincengiz.news.presentation.signin.SignInFragment"

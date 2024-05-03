@@ -39,4 +39,5 @@
     <string name="country">Ülke</string>
     <string name="change_password">Şifre Değiştir</string>
     <string name="new_password">Yeni Şifre</string>
+    <string name="notifications">Bildirimler</string>
 </resources>

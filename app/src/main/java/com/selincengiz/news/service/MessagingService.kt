@@ -2,10 +2,7 @@ package com.selincengiz.news.service
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.selincengiz.news.common.Notification.notificationList
 import com.selincengiz.news.common.NotificationUtils
-import com.selincengiz.news.domain.entities.Notification
-import com.selincengiz.news.presentation.notification.NotificationFragment
 
 class MessagingService : FirebaseMessagingService() {
 
@@ -16,9 +13,22 @@ class MessagingService : FirebaseMessagingService() {
         val desc = message.notification?.body
 
         if (title != null && desc != null) {
+
+        /*    val db = Firebase.firestore
+            val notification=Notification(title, desc)
+            Log.i("firebase", "${notification.title}")
+            db.collection("notifications").document(title)
+                .set(notification).addOnSuccessListener {
+                    Log.i("firebase", "DocumentSnapshot written")
+                }
+                .addOnFailureListener { e ->
+                    Log.i("firebase", "Error adding document", e)
+                }*/
+
             NotificationUtils.showNotification(this, title, desc)
-            notificationList.add(Notification(title, desc))
+
         }
+
 //Yerel bildirim oluşturma fonksiyonu
 
 

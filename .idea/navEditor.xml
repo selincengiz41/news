@@ -57,6 +57,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="homeToNotification">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -91,8 +96,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-36" />
-                            <option name="y" value="-259" />
+                            <option name="x" value="-211" />
+                            <option name="y" value="-438" />
                           </Point>
                         </option>
                         <option name="myPositions">

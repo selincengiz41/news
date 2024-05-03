@@ -40,5 +40,6 @@
     <string name="country">Country</string>
     <string name="change_password">Change Password</string>
     <string name="new_password">New Password</string>
+    <string name="notifications">Notifications</string>
 
 </resources>
