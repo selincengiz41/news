@@ -16,6 +16,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +31,7 @@ import com.selincengiz.news.common.Keyboard.isKeyboardShowing
 import com.selincengiz.news.databinding.FragmentHomeBinding
 import com.selincengiz.news.domain.entities.Category
 import com.selincengiz.news.domain.entities.News
+import com.selincengiz.news.presentation.profile.ProfileFragmentDirections
 import com.tistory.zladnrms.roundablelayout.RoundableLayout
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -89,6 +91,10 @@ class HomeFragment : Fragment(), ItemSliderListener, ItemNewsListener, ItemCateg
         viewModel.getNewsByCategory("business", Country.COUNTRY)
         binding.searchView.setOnQueryTextListener(this)
         binding.root.getViewTreeObserver().addOnGlobalLayoutListener(this)
+
+        binding.imageView2.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.homeToNotification())
+        }
 
         observe()
 

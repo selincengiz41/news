@@ -29,6 +29,9 @@
         <action
             android:id="@+id/homeToDetail"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/homeToNotification"
+            app:destination="@id/notificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -105,4 +108,8 @@
         android:id="@+id/passwordFragment"
         android:name="com.selincengiz.news.presentation.password.PasswordFragment"
         android:label="PasswordFragment" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.selincengiz.news.presentation.notification.NotificationFragment"
+        android:label="NotificationFragment" />
 </navigation>
