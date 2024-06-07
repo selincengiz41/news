@@ -24,7 +24,9 @@ This is a news application that provides instant access to breaking news. Users 
 
 ## :point_down: Structures 
 - MVVM
-- Firebase 
+- Firebase Auth
+- Firestore
+- FCM
 - Navigation
 - Hilt
 - Coroutines
@@ -36,6 +38,10 @@ This is a news application that provides instant access to breaking news. Users 
 - SDP/SSP Library
 - Lottie
 - Roundable Layout
+- Motion Layout
+- Shared Pref
+- Gson
+- Push notification
 
 
 ## :pencil2: Dependency
